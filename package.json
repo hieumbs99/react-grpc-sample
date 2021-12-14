@@ -1,0 +1,109 @@
+{
+  "name": "msb-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^2.5.2",
+    "@improbable-eng/grpc-web": "^0.14.0",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/canvas-txt": "^3.0.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/qrcode.react": "^1.0.1",
+    "@types/qs": "^6.9.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-table": "^7.7.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "canvas-txt": "^3.0.0",
+    "chart.js": "2.9.4",
+    "chartjs-plugin-annotation": "0.5.7",
+    "chartjs-plugin-datalabels": "^1.0.0",
+    "classnames": "^2.3.1",
+    "env-cmd": "^10.1.0",
+    "eventemitter3": "^4.0.7",
+    "firebase": "^8.3.2",
+    "flexlayout-react": "^0.5.5",
+    "google-protobuf": "^3.16.0-rc.2",
+    "grpc-web": "^1.2.1",
+    "html-react-parser": "^1.2.7",
+    "immutable": "^4.0.0-rc.12",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mqtt": "^4.2.6",
+    "numeral": "2.0.4",
+    "public-ip": "^4.0.4",
+    "qrcode.react": "^1.0.1",
+    "qs": "^6.10.1",
+    "rc-slider": "^9.7.2",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-bootstrap": "^1.5.2",
+    "react-scripts": "4.0.3",
+    "react-chartjs-2": "^2.11.1",
+    "react-datepicker": "^3.8.0",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.1.2",
+    "use-file-picker": "^1.3.0",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.10",
+    "replace": "^1.2.1",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:testing": "env-cmd -f .env.testing react-scripts start",
+    "fixParser": "replace goog.DEBUG=!0 goog.DEBUG=!1 node_modules/google-protobuf/google-protobuf.js",
+    "postinstall": "npm run fixParser",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "ci:style": "prettier --config .prettierrc.json -c \"src/**/*.{ts,tsx}\"",
+    "ci:lint": "eslint -c ./.eslintrc.commit.json src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@types/chart.js": "^2.9.32",
+    "@types/google-protobuf": "^3.15.2",
+    "@types/lodash": "^4.14.168",
+    "@types/numeral": "^2.0.1",
+    "@types/qrcode.react": "^1.0.1",
+    "@types/react-beautiful-dnd": "^13.1.1",
+    "@types/react-datepicker": "^3.1.8",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-select": "^4.0.14",
+    "@types/react-virtualized-auto-sizer": "^1.0.0",
+    "@types/react-window": "^1.8.2",
+    "@types/styled-components": "^5.1.9",
+    "@types/uuid": "^8.3.0",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1",
+    "source-map-explorer": "^2.5.2"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+
+}

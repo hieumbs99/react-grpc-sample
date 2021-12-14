@@ -1,0 +1,34 @@
+image: node:14
+
+cache:
+  paths:
+  - node_modules/
+  - .yarn
+
+stages:
+  - style
+  - lint
+  - build
+
+style:
+  stage: style
+  script:
+    - echo "Prettier ís preparing"
+    - yarn ci:style
+    - echo "Prettier style check successful"
+
+lint:
+  stage: lint
+  script:
+    - echo "Linter ís preparing"
+    - yarn install
+    - yarn ci:lint
+    - echo "Linter successful"
+
+build:
+  stage: build
+  script:
+    - echo "Build ís preparing"
+    - yarn install
+    - CI=false yarn build
+    - echo "Build successful"
